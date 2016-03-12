@@ -1,7 +1,11 @@
 import Config from '../config/environment';
 
 export function initialize(appInstance) {
-  if (Config.mixpanel.enabled) {
+  if (Config.mixpanel.trackTransitions == null) {
+    Config.mixpanel.trackTransitions = true;
+  }
+
+  if (Config.mixpanel.enabled && Config.mixpanel.trackTransitions) {
     if (typeof(appInstance.lookup) === 'undefined') {
       appInstance = appInstance.container;
     }

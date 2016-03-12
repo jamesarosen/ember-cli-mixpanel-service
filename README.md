@@ -38,6 +38,7 @@ Add your typekit kitId to `config/environment.js` and you're good to go. A coupl
 ## Configuration Parameters
 
 * `enabled` (Default: `true`): Enable mixpanel tracking
+* `trackTransitions` (Default: `true`): automatically track route transitions (also requires `enabled: true`)
 * `LOG_EVENT_TRACKING` (Default: `false`): Output logging to the console.
 * `token` (Default: `null`): Mandatory mixpanel api token
 
